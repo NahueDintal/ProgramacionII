@@ -1,0 +1,10 @@
+{
+  "name": "primeraAct",
+  "version": "1.0.0",
+  "mainClass": "Main",
+  "sourceDirectories": ["src"],
+  "testDirectories": [],
+  "dependencies": [],
+  "outputDirectory": "out/production/primeraAct",
+  "javaVersion": 17
+}
