@@ -25,35 +25,96 @@ public class Main {
       System.out.println(contador);
       contador--;
     }
-    System.out.println("Despegue!!!");
-    System.out.println("Validación de contraseña, pedir al usuario contraseña y verififcar que sea correcta");
+    // System.out.println("Despegue!!!");
+    // System.out.println("Validación de contraseña, pedir al usuario contraseña y
+    // verififcar que sea correcta");
+    // boolean estado = false;
+    // while (estado == false) {
+    // Scanner sc = new Scanner(System.in);
+    //
+    // String usuario = "Pancho";
+    // String clave = "Villa123";
+    //
+    // System.out.print("Ingrese usuario: ");
+    // String ingresoUsuario = sc.nextLine();
+    //
+    // if (usuario.equals(ingresoUsuario)) {
+    // System.out.println("Bienvenido " + usuario);
+    // } else {
+    // System.out.println("Usuario no encontrado...");
+    // }
+    //
+    // System.out.print("Ingresar la contraseña: ");
+    // String ingresoClave = sc.nextLine();
+    // if (clave.equals(ingresoClave)) {
+    // System.out.println("Clave Correcta, buena jornada!!");
+    // estado = true;
+    // } else {
+    // System.out.println("Clave Incorrecta...");
+    // }
+    // sc.close();
+    // }
+
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Adivinar un numero, detener el ciclo cuando el numero ingresado sea igual al condicional");
+    int numero = 5;
+    int intento = 0;
     boolean estado = false;
     while (estado == false) {
-      Scanner sc = new Scanner(System.in);
-
-      String usuario = "Pancho";
-      String clave = "Villa123";
-
-      System.out.println("Ingrese usuario: ");
-      String ingresoUsuario = sc.nextLine();
-
-      if (usuario.equals(ingresoUsuario)) {
-        System.out.println("Bienvenido " + usuario);
-      } else {
-        System.out.println("Usuario no encontrado...");
-      }
-
-      System.out.println("Ingresar la contraseña: ");
-      String ingresoClave = sc.nextLine();
-      if (clave.equals(ingresoClave)) {
-        System.out.println("Clave Correcta, buena jornada!!");
+      System.out.print("Ingresa un numero del 1 al 10: ");
+      intento = sc.nextInt();
+      if (intento == numero) {
         estado = true;
-      } else {
-        System.out.println("Clave Incorrecta...");
+        System.out.println("Adivinaste!!");
       }
-
-      sc.close();
     }
-    System.out.println("Adivinar un numero, detener el ciclo cuando el numero sea ingresado igal al condicional");
+
+    // Do while
+    // "Menú Simple (Una Vez Garantizada): Imprime un menú de opciones al menos
+    // una vez, y luego pregunta si el usuario quiere verlo de nuevo.
+    // El bucle continúa si el usuario lo desea.");
+
+    int opcion = 0;
+    do {
+      System.out.println("1.Siguiente...");
+      System.out.println("2.Omitir...");
+      System.out.println("3.Menú anterior...");
+      System.out.println("4.Salir...");
+      System.out.print("Opcion: ");
+      opcion = sc.nextInt();
+      switch (opcion) {
+        case 1:
+          continue;
+        case 2:
+          continue;
+        case 3:
+          continue;
+        case 4:
+          System.out.println("Saliendo...");
+      }
+    } while (opcion != 4);
+
+    // Solicitar Número Positivo: Pide al usuario que ingrese un número, y sigue
+    // pidiéndolo hasta que ingrese un número positivo.
+    double numeroPositivo = 0;
+    do {
+      System.out.print("Ingresa un numero positivo: ");
+      numeroPositivo = sc.nextDouble();
+      if (numeroPositivo <= 0) {
+        System.out.println("Por favor, ingresa un numero entero positivo.");
+      } else {
+        System.out.println("Chas Gracias!!");
+      }
+    } while (numeroPositivo <= 0);
+
+    // Contador Mínimo: Imprime números del 1 al 3. Asegura que al menos el 1 se
+    // imprima, incluso si la condición del while se cumple desde el principio.
+    int contadorBucle = 1;
+    do {
+      System.out.println(contadorBucle);
+      contadorBucle++;
+    } while (contadorBucle <= 3);
+
+    sc.close();
   }
 }
