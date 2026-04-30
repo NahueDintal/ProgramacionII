@@ -18,38 +18,42 @@ public class Main {
       suma += i;
     }
     System.out.println("El resultado es: " + suma);
-    // System.out.println("While");
-    // System.out.println("Cuenta regresiva del 5 al 1 y ¡Despegue!");
-    // while ( true ) {
-    // for (int i = 5; i > 0; i--) {
-    // System.out.println(i);
-    // }
-    // System.out.println("Despegue!!!");
-    // return;
-    // }
+    System.out.println("While");
+    System.out.println("Cuenta regresiva del 5 al 1 y ¡Despegue!");
+    int contador = 5;
+    while (contador != 0) {
+      System.out.println(contador);
+      contador--;
+    }
+    System.out.println("Despegue!!!");
     System.out.println("Validación de contraseña, pedir al usuario contraseña y verififcar que sea correcta");
-    while (true) {
+    boolean estado = false;
+    while (estado == false) {
+      Scanner sc = new Scanner(System.in);
+
       String usuario = "Pancho";
       String clave = "Villa123";
+
       System.out.println("Ingrese usuario: ");
-      Scanner sc = new Scanner(System.in);
       String ingresoUsuario = sc.nextLine();
+
       if (usuario.equals(ingresoUsuario)) {
         System.out.println("Bienvenido " + usuario);
       } else {
         System.out.println("Usuario no encontrado...");
       }
+
       System.out.println("Ingresar la contraseña: ");
       String ingresoClave = sc.nextLine();
       if (clave.equals(ingresoClave)) {
         System.out.println("Clave Correcta, buena jornada!!");
+        estado = true;
       } else {
         System.out.println("Clave Incorrecta...");
       }
+
       sc.close();
-      continue;
     }
-    // System.out.println("Adivinar un numero, detener el ciclo cuando el numero sea
-    // ingresado igal al condicional");
+    System.out.println("Adivinar un numero, detener el ciclo cuando el numero sea ingresado igal al condicional");
   }
 }
