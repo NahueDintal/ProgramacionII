@@ -115,6 +115,17 @@ public class Main {
       contadorBucle++;
     } while (contadorBucle <= 3);
 
+    // Tablas de Multiplicar (del 1 al 5): Usa un bucle externo (for) para iterar
+    // por
+    // las tablas del 1 al 5, y un bucle interno (for, while o do-while) para
+    // calcular e
+    // imprimir cada multiplicación (del 1 al 10).
+
+    for (int i = 1; i <= 5; i++) {
+      producto = primerNumero * segundoNumero;
+      System.out.println(producto);
+    }
+
     sc.close();
 
   }
