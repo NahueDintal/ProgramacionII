@@ -15,7 +15,27 @@ public class Pedido {
     this.items = new ArrayList<>();
   }
 
-  public void agreagarItem(itemPedido item) {
-    items.add(items);
+  public void agreagarItem(ItemPedido item) {
+    items.add(item);
+  }
+
+  public double calcularTotal() {
+    double total = 0;
+    for (int i = 0; i < items.size(); i++) {
+      ItemPedido item = items.get(i);
+      total += item.getProducto().getPrecio() * item.getCantidadSolicitada();
+    }
+    return total;
+  }
+
+  public void confirmarDisponibilidad() {
+    Scanner scanner = new Scanner(System.in);
+    for (ItemPedido item : items) {
+      Producto producto = item.getProducto();
+      int solicitada = item.getCantidadSolicitada();
+      while (solicitada > producto.getCantidadDisponible()) {
+
+      }
+    }
   }
 }
