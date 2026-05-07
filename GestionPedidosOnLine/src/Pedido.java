@@ -34,8 +34,20 @@ public class Pedido {
       Producto producto = item.getProducto();
       int solicitada = item.getCantidadSolicitada();
       while (solicitada > producto.getCantidadDisponible()) {
+        System.out.println("Producto" + producto.getNombre() + "- Stock disponible: " + producto.getCantidadDisponible()
+            + ", solicitaddo: " + solicitada);
+        System.out.print("Ajuste la cantidad (máximo " + producto.getCantidadDisponible() + "): ");
+        int nuevaCantidad = scanner.nextInt();
 
       }
+      item.setCantidadSolicitada(solicitada);
     }
+    System.out.println("Disponibilidad confirmada para el pedido " + idPedido);
   }
+
+  // Bucle DO-WHILE para procesar el pedido (empaquetado iterativo)
+  public void procesarPedido() {
+
+  }
+
 }
