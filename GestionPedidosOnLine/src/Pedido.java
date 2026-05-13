@@ -43,6 +43,7 @@ public class Pedido {
       item.setCantidadSolicitada(solicitada);
     }
     System.out.println("Disponibilidad confirmada para el pedido " + idPedido);
+    scanner.close();
   }
 
   // Bucle DO-WHILE para procesar el pedido (empaquetado iterativo)
