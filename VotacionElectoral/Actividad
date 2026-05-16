@@ -1,0 +1,21 @@
+Ejercicio 2: Sistema de Votación Electoral
+Descripción: Crea un sistema que simule una elección, permitiendo a los
+votantes elegir entre diferentes candidatos y mostrando los resultados.
+Requisitos de POO:
+● Define una clase Candidato con atributos como nombre (String), partido
+(String) y votos (int, inicializado en 0).
+● Crea una clase Votante con un idVotante (String) y un booleano yaVoto
+(inicializado en false).
+● Crea una clase Eleccion que contenga un ArrayList de Candidato y un
+ArrayList de Votante.
+● Diseña el diagrama de clases con los sig. métodos: registrar candidatos,
+registrar votantes, emitir voto y mostrar resultados.
+Aplicación de Bucles:
+● do-while: En la clase Eleccion, implementa un método emitirVoto(Votante
+votante) que simule el proceso de votación. Usa un do-while para presentar las
+opciones de candidatos al votante y solicitarle su elección, repitiendo la
+pregunta si la entrada es inválida o si el votante ya ha votado.
+● for: Utiliza un bucle for en la clase Eleccion para recorrer la lista de Candidato
+y mostrar sus nombres y partidos antes de la votación.
+● while: Después de la votación, usa un bucle while para iterar sobre la lista de
+Candidato y encontrar al ganador (el que tenga más votos).
