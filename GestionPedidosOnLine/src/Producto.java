@@ -26,4 +26,5 @@ public class Producto {
   public void setCantidadDisponible(int cantidadDisponible) {
     this.cantidadDisponible = cantidadDisponible;
   }
+
 }

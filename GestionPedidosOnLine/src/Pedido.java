@@ -1,6 +1,3 @@
-
-// Crea una clase Pedido con un ArrayList de ItemPedido, un idPedido (String) y
-// un estado (String, ej: "Pendiente", "Completado"). ​
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,40 +12,57 @@ public class Pedido {
     this.items = new ArrayList<>();
   }
 
-  public void agreagarItem(ItemPedido item) {
+  public void agregarItem(ItemPedido item) {
     items.add(item);
+  }
+
+  public void setEstado(String estado) {
+    this.estado = estado;
   }
 
   public double calcularTotal() {
     double total = 0;
-    for (int i = 0; i < items.size(); i++) {
-      ItemPedido item = items.get(i);
+    for (ItemPedido item : items) {
       total += item.getProducto().getPrecio() * item.getCantidadSolicitada();
     }
     return total;
   }
 
-  public void confirmarDisponibilidad() {
-    Scanner scanner = new Scanner(System.in);
+  public void confirmarDisponibilidad(Scanner sc) {
     for (ItemPedido item : items) {
-      Producto producto = item.getProducto();
+      Producto p = item.getProducto();
       int solicitada = item.getCantidadSolicitada();
-      while (solicitada > producto.getCantidadDisponible()) {
-        System.out.println("Producto" + producto.getNombre() + "- Stock disponible: " + producto.getCantidadDisponible()
-            + ", solicitaddo: " + solicitada);
-        System.out.print("Ajuste la cantidad (máximo " + producto.getCantidadDisponible() + "): ");
-        int nuevaCantidad = scanner.nextInt();
+      int disponible = item.getProducto().getCantidadDisponible();
 
+      while (solicitada > disponible) {
+        System.out.println("Stock insuficiente, disponible: " + disponible);
+        System.out.print("Ingrese nueva cantidad: ");
+        int nuevaCantidad = sc.nextInt();
+        if (nuevaCantidad >= 0 && nuevaCantidad <= disponible) {
+          item.setCantidadSolicitada(nuevaCantidad);
+          solicitada = nuevaCantidad;
+        } else {
+          System.out.println("Cantidad Inválida.");
+        }
       }
-      item.setCantidadSolicitada(solicitada);
     }
-    System.out.println("Disponibilidad confirmada para el pedido " + idPedido);
-    scanner.close();
+    System.out.println("Disponibilidad de todos los items");
   }
 
-  // Bucle DO-WHILE para procesar el pedido (empaquetado iterativo)
   public void procesarPedido() {
+    for (ItemPedido item : items) {
+      Producto p = item.getProducto();
+      int nuevaDisponible = p.getCantidadDisponible() - item.getCantidadSolicitada();
+      p.setCantidadDisponible(nuevaDisponible);
+      System.out.println("Stock restante: " + nuevaDisponible);
 
+      int procesado = 0;
+      do {
+        System.out.println("Empaquetando ítem " + (procesado + 1) + "...");
+        procesado++;
+      } while (procesado < items.size());
+      setEstado("Completado");
+      System.out.println("Pedido " + idPedido + " completado.");
+    }
   }
-
 }
