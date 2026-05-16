@@ -1,0 +1,27 @@
+Ejercicio 4: Sistema de Gestión de Proyectos
+Descripción: Desarrolla un sistema simple para gestionar proyectos,
+permitiendo asignar tareas a diferentes miembros del equipo y seguir su
+progreso.
+Requisitos de POO:
+● Crea una clase Tarea con atributos como nombre (String), descripcion (String),
+estado (String, e.g., "Pendiente", "En Progreso", "Completada") y fechaLimite
+(String).
+● Crea una clase MiembroEquipo con atributos como nombre (String), rol
+(String) y una lista de Tareas asignadas.
+● Crea una clase Proyecto con nombre (String), fechaInicio (String),
+fechaFinEstimada (String), un ArrayList de Tareas y un ArrayList de
+MiembroEquipo.
+● Diseña el diagrama de clases con los sig. métodos:
+agregar tareas, asignar tareas a miembros, actualizar el estado de una tarea y
+mostrar el progreso del proyecto.
+Aplicación de Bucles:
+● for: En la clase Proyecto, utiliza un bucle for para iterar sobre todas las Tarea y
+mostrar su estado actual, permitiendo ver el progreso general del proyecto.
+● while: En un método de la clase Proyecto para asignarTarea(Tarea tarea,
+MiembroEquipo miembro), usa un bucle while para simular la búsqueda de un
+miembro del equipo disponible o adecuado para la tarea (podría ser una
+simulación de criterio o simplemente encontrar el primer miembro disponible).
+● do-while: En la clase Tarea, crea un método actualizarEstado() que use un
+do-while para solicitar al usuario el nuevo estado de la tarea (Pendiente, En
+Progreso, Completada). El bucle debería repetirse si la entrada del usuario no es
+uno de los estados válidos.
