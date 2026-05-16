@@ -1,0 +1,22 @@
+Ejercicio 3: Biblioteca Digital
+Descripción: Desarrolla un sistema para gestionar libros en una biblioteca
+digital, permitiendo agregar, buscar y "prestar" libros.
+Requisitos de POO:
+● Crea una clase Libro con atributos como titulo (String), autor (String), isbn
+(String), anioPublicacion (int) y disponible (boolean, inicializado en true).
+● Crea una clase Usuario con nombre (String), idUsuario (String) y una lista de
+Libro prestados.
+● Crea una clase Biblioteca que contenga un ArrayList de Libro.
+● Diseña el diagrama de clases con los sig. métodos: agregar libros, buscar libros
+por título/autor, prestar libro a un usuario y devolver libro.
+Aplicación de Bucles:
+● while: En la clase Biblioteca, implementa un método buscarLibro(String
+criterio, String valor) que permita buscar libros. Usa un bucle while para
+recorrer la lista de libros y agregar aquellos que coincidan con el criterio (título
+o autor) a una nueva lista que será devuelta.
+● do-while: En un método prestarLibro(String isbn, Usuario usuario), usa un
+do-while para simular el intento de préstamo. El bucle podría repetirse si el libro
+no está disponible o si el ISBN no existe, permitiendo al usuario intentar con
+otro ISBN (simulación de entrada de usuario).
+● for: En la clase Usuario, utiliza un bucle for para mostrar los libros que el
+usuario tiene actualmente prestados.
