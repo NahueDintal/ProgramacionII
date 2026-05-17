@@ -1,8 +1,17 @@
-public class Eleccion {
-  // array list de votante y de candidatos
-  private 
+import java.util.ArrayList;
 
-  do {
+public class Eleccion {
+  private ArrayList<ItemPedido> idVotante;
+  // array list de votante y de candidatos
+
+  private
+
+  do
+  {
+    for (Candidato : idVotante) {
+      
+    }
+    System.out.println("Ingrese ")
     
-  } while (true);
-  }}
+  }while(voto==true);
+}}
