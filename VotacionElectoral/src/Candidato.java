@@ -24,4 +24,8 @@ public class Candidato {
   public void setVotos(int votos) {
     this.votos = votos;
   }
+
+  public void sumarVoto() {
+    this.votos++;
+  }
 }

@@ -1,5 +1,9 @@
+import com.sun.org.apache.xerces.internal.dom.ElementDefinitionImpl;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("¡Hola Wachin! Desde 'VotacionElectoral' con Java 17!");
-    }
+  public static void main(String[] args) {
+    Eleccion eleccion = new Eleccion();
+
+    eleccion.registrarCandidato("Ana", "Partido Azul");
+  }
 }
