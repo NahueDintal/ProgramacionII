@@ -26,10 +26,4 @@ public class Usuario {
     this.nombre = nombre;
   }
 
-  public void librosPrestados(Libro l) {
-    if (l != null) {
-      librosPrestados.add(l);
-    }
-    System.out.println("El libro: " + l.getTitulo());
-  }
 }

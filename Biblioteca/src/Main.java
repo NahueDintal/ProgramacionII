@@ -12,9 +12,19 @@ public class Main {
     biblioteca.agregarLibro(l3);
 
     String tituloBuscar = "Java para todos";
-    Libro encontrado = biblioteca.buscarLibro(tituloBuscar);
-    if (encontrado == null) {
+    Libro tituloEncontrado = biblioteca.buscarLibroTitulo(tituloBuscar);
+    if (tituloEncontrado == null) {
       System.out.println("No se hay resultado");
+    } else {
+      System.out.println("Encontrado titulo: " + tituloEncontrado);
+    }
+
+    String autorBuscar = "JRR Tolkien";
+    Libro autorEncontrado = biblioteca.buscarLibroAutor(autorBuscar);
+    if (autorEncontrado == null) {
+      System.out.println("No se hay resultado");
+    } else {
+      System.out.println("Encontrado autor: " + autorEncontrado);
     }
 
     biblioteca.devolverLibro("Java para todos");

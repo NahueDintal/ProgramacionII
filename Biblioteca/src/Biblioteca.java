@@ -16,7 +16,7 @@ public class Biblioteca {
     }
   }
 
-  public Libro buscarLibro(String tituloBuscado) {
+  public Libro buscarLibroTitulo(String tituloBuscado) {
     int i = 0;
     while (i < libros.size()) {
       Libro actual = libros.get(i);
@@ -28,15 +28,27 @@ public class Biblioteca {
     return null;
   }
 
+  public Libro buscarLibroAutor(String autorBuscado) {
+    int i = 0;
+    while (i < libros.size()) {
+      Libro actual = libros.get(i);
+      if (actual.getTitulo().equalsIgnoreCase(autorBuscado)) {
+        return actual;
+      }
+      i++;
+    }
+    return null;
+  }
+
   public boolean prestarLibro(String titulo) {
-    Libro libro = buscarLibro(titulo);
+    Libro libro = buscarLibroTitulo(titulo);
     System.out.println("Se ha prestado el libro: " + titulo);
     libro.prestarLibro();
     return true;
   }
 
   public boolean devolverLibro(String titulo) {
-    Libro libro = buscarLibro(titulo);
+    Libro libro = buscarLibroTitulo(titulo);
     System.out.println("Se ha devuelto el libro: " + titulo);
     libro.devolverLibro();
     return true;
