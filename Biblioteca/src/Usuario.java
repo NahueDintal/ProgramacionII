@@ -3,11 +3,12 @@ import java.util.ArrayList;
 public class Usuario {
   private String idUsuario;
   private String nombre;
-  private ArrayList<Libro> librosPrestados = new ArrayList<>();
+  private ArrayList<Libro> librosPrestados;
 
   public Usuario(String idUsuario, String nombre) {
     this.idUsuario = idUsuario;
     this.nombre = nombre;
+    this.librosPrestados = new ArrayList<>();
   }
 
   public String getIdUsuario() {
