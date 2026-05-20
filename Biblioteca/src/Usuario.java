@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+public class Usuario {
+  private String idUsuario;
+  private String nombre;
+  private ArrayList<Libro> librosPrestados = new ArrayList<>();
+
+  public Usuario(String idUsuario, String nombre) {
+    this.idUsuario = idUsuario;
+    this.nombre = nombre;
+  }
+
+  public String getIdUsuario() {
+    return idUsuario;
+  }
+
+  public String getNombre() {
+    return nombre;
+  }
+
+  public void setIdUsuario(String idUsuario) {
+    this.idUsuario = idUsuario;
+  }
+
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+
+  public void librosPrestados(Libro l) {
+    if (l != null) {
+      librosPrestados.add(l);
+    }
+    System.out.println("El libro: " + l.getTitulo());
+  }
+}
