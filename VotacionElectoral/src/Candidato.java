@@ -3,10 +3,9 @@ public class Candidato {
   private String partido;
   private int votos = 0;
 
-  public Candidato(String nombre, String partido, int votos) {
+  public Candidato(String nombre, String partido) {
     this.nombre = nombre;
     this.partido = partido;
-    this.votos = votos;
   }
 
   public String getNombre() {

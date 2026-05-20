@@ -17,7 +17,7 @@ public class Eleccion {
 
   public void registrarVotante(Votante v) {
     votantes.add(v);
-    System.out.println("Candidato aderido: " + v.getIdVotante());
+    System.out.println("Votante aderido: " + v.getIdVotante());
   }
 
   public void emitirVoto(Votante v) {

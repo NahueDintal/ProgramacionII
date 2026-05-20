@@ -2,13 +2,8 @@ public class Votante {
   private String idVotante;
   private boolean yaVoto = false;
 
-  public Votante(String idVotante, boolean yaVoto) {
+  public Votante(String idVotante) {
     this.idVotante = idVotante;
-    this.yaVoto = yaVoto;
-  }
-
-  public void setYaVoto(boolean yaVoto) {
-    this.yaVoto = yaVoto;
   }
 
   public String getIdVotante() {
