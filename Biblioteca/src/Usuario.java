@@ -11,6 +11,9 @@ public class Usuario {
     this.librosPrestados = new ArrayList<>();
   }
 
+  // usar for para listar los libros prestados
+  public
+
   public String getIdUsuario() {
     return idUsuario;
   }

@@ -10,7 +10,8 @@ public class Biblioteca {
   public void agregarLibro(Libro l) {
     if (l != null) {
       libros.add(l);
-      System.out.println("El libro: " + l.getTitulo());
+      System.out.println("El libro: " + l.getTitulo() + " fue agregado con éxito.");
+      // asignar el libro al usuario
     } else {
       System.out.println("Ingrese un valor. No puede campo no puede estar vacío.");
     }
@@ -40,7 +41,7 @@ public class Biblioteca {
     return null;
   }
 
-  public boolean prestarLibro(String titulo) {
+  public boolean prestarLibro(String titulo, String idUsuario) {
     Libro libro = buscarLibroTitulo(titulo);
     System.out.println("Se ha prestado el libro: " + titulo);
     libro.prestarLibro();
