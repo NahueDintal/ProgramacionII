@@ -12,7 +12,6 @@ public class Usuario {
   }
 
   // usar for para listar los libros prestados
-  public
 
   public String getIdUsuario() {
     return idUsuario;
@@ -22,12 +21,20 @@ public class Usuario {
     return nombre;
   }
 
-  public void setIdUsuario(String idUsuario) {
-    this.idUsuario = idUsuario;
+  public void agreagarLibroPrestado(Libro libro) {
+    librosPrestados.add(libro);
   }
 
-  public void setNombre(String nombre) {
-    this.nombre = nombre;
-  }
+  public void mostrarLibrosPrestados() {
+    if (librosPrestados.isEmpty()) {
+      System.out.println("El Usuario no tiene libros prestados que mostrar");
+      return;
+    }
 
+    System.out.println("Libros prestado a " + nombre);
+    for (int i = 0; i < librosPrestados.size(); i++) {
+      Libro libro = librosPrestados.get(i);
+      System.out.println((i + 1) + " " + libro.getTitulo() + " " + libro.getAutor());
+    }
+  }
 }

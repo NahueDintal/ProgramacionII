@@ -1,26 +1,25 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Biblioteca {
-  private ArrayList<Libro> libros;
+  private List<Libro> catalogo;
 
   public Biblioteca() {
-    this.libros = new ArrayList<>();
+    this.catalogo = new ArrayList<>();
   }
 
   public void agregarLibro(Libro l) {
     if (l != null) {
-      libros.add(l);
+      catalogo.add(l);
       System.out.println("El libro: " + l.getTitulo() + " fue agregado con éxito.");
-      // asignar el libro al usuario
-    } else {
-      System.out.println("Ingrese un valor. No puede campo no puede estar vacío.");
     }
   }
 
   public Libro buscarLibroTitulo(String tituloBuscado) {
     int i = 0;
-    while (i < libros.size()) {
-      Libro actual = libros.get(i);
+    while (i < catalogo.size()) {
+      Libro actual = catalogo.get(i);
       if (actual.getTitulo().equalsIgnoreCase(tituloBuscado)) {
         return actual;
       }
@@ -31,8 +30,8 @@ public class Biblioteca {
 
   public Libro buscarLibroAutor(String autorBuscado) {
     int i = 0;
-    while (i < libros.size()) {
-      Libro actual = libros.get(i);
+    while (i < catalogo.size()) {
+      Libro actual = catalogo.get(i);
       if (actual.getTitulo().equalsIgnoreCase(autorBuscado)) {
         return actual;
       }
@@ -42,9 +41,15 @@ public class Biblioteca {
   }
 
   public boolean prestarLibro(String titulo, String idUsuario) {
-    Libro libro = buscarLibroTitulo(titulo);
-    System.out.println("Se ha prestado el libro: " + titulo);
-    libro.prestarLibro();
+    Scanner sc = new Scanner(System.in);
+    boolean prestadoExitoso = false;
+
+    do {
+      Libro libro = buscarLibroTitulo(titulo);
+      System.out.println("Se ha prestado el libro: " + titulo);
+      libro.prestarLibro();
+
+    } while (!prestadoExitoso);
     return true;
   }
 
