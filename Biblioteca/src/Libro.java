@@ -1,5 +1,4 @@
 public class Libro {
-
   private String isbn;
   private String titulo;
   private String autor;
@@ -29,7 +28,7 @@ public class Libro {
     return anioPublicacion;
   }
 
-  public boolean getDispobible() {
+  public boolean getDisponible() {
     return disponible;
   }
 
@@ -45,16 +44,13 @@ public class Libro {
     this.autor = autor;
   }
 
+  public void setDisponible(boolean disponible) {
+    this.disponible = disponible;
+  }
+
   public void setAnioPublicacion(int anioPublicacion) {
     this.anioPublicacion = anioPublicacion;
   }
 
-  public void prestarLibro() {
-    this.disponible = false;
-  }
-
-  public void devolverLibro() {
-    this.disponible = true;
-  }
 
 }

@@ -21,8 +21,12 @@ public class Usuario {
     return nombre;
   }
 
-  public void agreagarLibroPrestado(Libro libro) {
+  public void agregarLibroPrestado(Libro libro) {
     librosPrestados.add(libro);
+  }
+
+  public boolean devolverLibro(Libro libro) {
+    return librosPrestados.remove(libro);
   }
 
   public void mostrarLibrosPrestados() {
