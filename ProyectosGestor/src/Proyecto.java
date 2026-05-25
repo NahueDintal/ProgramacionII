@@ -39,10 +39,10 @@ public class Proyecto {
 
   public void asignarTarea(Tarea tarea) {
     MiembroEquipo asignado = null;
-    int idx = 0;
-    while (idx < miembros.size() && asignado == null) {
-      asignado = miembros.get(idx);
-      idx++;
+    int idMiembro = 0;
+    while (idMiembro < miembros.size() && asignado == null) {
+      asignado = miembros.get(idMiembro);
+      idMiembro++;
     }
     if (asignado != null) {
       asignado.asignarTarea(tarea);
@@ -52,7 +52,7 @@ public class Proyecto {
   }
 
   public void mostrarProgreso() {
-    System.out.println("\n=== Progreso del Proyecto: " + nombre + " ===");
+    System.out.println("Progreso del Proyecto: " + nombre);
     System.out.println("Inicio: " + fechaInicio + " | Fin estimado: " + fechaFinEstimada);
     if (tareas.isEmpty()) {
       System.out.println("No hay tareas definidas.");
