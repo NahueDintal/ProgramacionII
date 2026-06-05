@@ -135,4 +135,16 @@ public class Biblioteca {
       System.out.println(libro);
     }
   }
+
+  public void mostrarCatalogo() {
+    System.out.println("\n--- Catálogo de la Biblioteca ---");
+    if (catalogo.isEmpty()) {
+      System.out.println("No hay libros en el catálogo.");
+      return;
+    }
+    for (Libro libro : catalogo) {
+      System.out.println(libro);
+    }
+  }
+
 }
