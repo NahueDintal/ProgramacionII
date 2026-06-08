@@ -20,9 +20,15 @@ public class Main {
 
     System.out.println(NivelTres.promedio(new double[] { 1, 2, 3, 4, 5 }));
 
-    System.out.println(NivelTres.buscarNumero(new int[] { 1, 2, 3, 4, 5 }));
+    // System.out.println(NivelTres.buscarNumero(new int[] { 1, 2, 3, 4, 5 }));
 
     String[] palabras = { "hola", "HOLA", "mundo", "Hola" };
     System.out.println(NivelTres.contadorOcurrencia(palabras, "hola")); // 3
+
+    NivelCuatro.formateado(new int[] { 1, 2, 3 });
+
+    String[] alumnos = { "Ana", "Luis", "Carlos", "Marta" };
+    int[] notas = { 7, 9, 5, 9 };
+    NivelCuatro.mejorNotaAlumno(alumnos, notas);
   }
 }
