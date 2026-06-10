@@ -22,16 +22,17 @@ public class NivelCuatro {
   }
 
   public static void mejorNotaAlumno(String[] alumnos, int[] notas) {
-    int mejorNota = notas[0];
-    int indiceMejor = 0;
+    int mejorNota = 0;
     for (int i = 0; i < notas.length; i++) {
-      if (notas[i] > mejorNota) {
+      if (notas[i] >= mejorNota) {
         mejorNota = notas[i];
-        indiceMejor = i;
       }
     }
-    System.out.print("El alumno con la mejor nota es: " + alumnos[indiceMejor]
-        + " con " + mejorNota + ".");
+    System.out.println("Los alumnos con mejor nota son: ");
+    for (int i = 0; i < notas.length; i++) {
+      if (notas[i] == mejorNota) {
+        System.out.println(alumnos[i] + " " + mejorNota);
+      }
+    }
   }
-
 }

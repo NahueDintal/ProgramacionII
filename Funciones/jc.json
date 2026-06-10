@@ -1,10 +1,10 @@
 {
-  "name": "NivelUno",
+  "name": "Funciones",
   "version": "1.0.0",
   "mainClass": "Main",
   "sourceDirectories": ["src"],
   "testDirectories": [],
   "dependencies": [],
-  "outputDirectory": "out/production/NivelUno",
+  "outputDirectory": "out/production/Funciones",
   "javaVersion": 17
 }
