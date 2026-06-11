@@ -1,0 +1,10 @@
+{
+  "name": "GestionPedidosOnLine",
+  "version": "1.0.0",
+  "mainClass": "Main",
+  "sourceDirectories": ["src"],
+  "testDirectories": [],
+  "dependencies": [],
+  "outputDirectory": "out/production/GestionPedidosOnLine",
+  "javaVersion": 17
+}
