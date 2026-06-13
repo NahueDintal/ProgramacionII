@@ -4,9 +4,9 @@ public class Main {
   public static void main(String[] args) {
     Proyecto proyecto = new Proyecto("Sistema de Biblioteca Digital", "2026-06-01", "2026-08-30");
 
-    MiembroEquipo ana = new MiembroEquipo("Ana", "Desarrolladora");
-    MiembroEquipo carlos = new MiembroEquipo("Carlos", "Tester");
-    MiembroEquipo luis = new MiembroEquipo("Luis", "Desarrollador");
+    MiembroEquipo ana = new MiembroEquipo("Anita", "Desarrolladora");
+    MiembroEquipo carlos = new MiembroEquipo("Carlitos", "Tester");
+    MiembroEquipo luis = new MiembroEquipo("Luis", "Backend");
 
     proyecto.agregarMiembro(ana);
     proyecto.agregarMiembro(carlos);
